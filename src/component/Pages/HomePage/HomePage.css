@@ -1,0 +1,29 @@
+.HomePageDiv {
+  width: 100%;
+  height: 95vh;
+  background-image: url(../../assest/images/bg.png);
+  background-position: center;
+  background-size: cover;
+}
+.HomePageContent {
+  text-align: center;
+  padding: 30px 0;
+}
+.HomePageContent h1 {
+  font-size: 3.5rem;
+  max-width: 650px;
+  margin: auto;
+  text-align: left;
+  color: var(--MainColor);
+  font-family: var(--Righteous);
+}
+.spacer {
+  width: 100%;
+  height: 50%;
+}
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
