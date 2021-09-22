@@ -1,0 +1,20 @@
+.TvShowDiv {
+  width: 100%;
+  height: auto;
+  padding: 40px 0;
+  background-color: #000;
+}
+.TvShowInner {
+  max-width: 1600px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.card {
+  width: 300px;
+  height: 350px;
+  background-color: red;
+  margin: 1rem 0.5rem;
+  background-size: cover;
+  background-position: center;
+}

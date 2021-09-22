@@ -1,0 +1,29 @@
+.SideBar {
+  width: 100px;
+  height: 120vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconDiv i {
+  color: var(--MainColor);
+}
+.iconInner {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--MainColor);
+  border-radius: 50%;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+}
+.iconInner:hover {
+  transform: translateY(-10px);
+}

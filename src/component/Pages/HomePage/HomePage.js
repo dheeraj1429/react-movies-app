@@ -1,5 +1,6 @@
 import React from "react";
 import CustomButton from "../../CustomButtom/CustomButton";
+import TvShows from "../../TvShows/TvShows";
 
 import "./HomePage.css";
 
@@ -18,6 +19,8 @@ function HomePage() {
           <CustomButton />
         </div>
       </div>
+
+      <TvShows />
     </>
   );
 }
