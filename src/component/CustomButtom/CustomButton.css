@@ -1,6 +1,6 @@
 .CustomButton {
   border: none;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   background-color: var(--lightRed);
   color: var(--MainColor);
   cursor: pointer;

@@ -3,18 +3,14 @@ import { withRouter } from "react-router";
 import "./NavBar.css";
 
 function NavBar({ history, match }) {
-  const NavBarData = {
-    first: "Home",
-    second: "Tv Show",
-    three: "Movies",
-    four: "New & Popular",
-  };
+  const NavBarDataLink = [
+    { urlLink: "", id: 1, innerText: "Home" },
+    { urlLink: "TvShow", id: 2, innerText: "Tv Show" },
+    { urlLink: "Movies", id: 3, innerText: "Movies" },
+    { urlLink: "New&Popular", id: 4, innerText: "New & Popular" },
+  ];
 
-  const changePageHandler = (e) => {
-    const target = e.target.innerHTML;
-    const TrimNav = target.replaceAll(" ", "");
-    history.push(`${match.url}${TrimNav}`);
-  };
+  const NavBarIconsData = [{ iconClass: "fas fa-search" }, { iconClass: "fas fa-heart" }, { iconClass: "fas fa-user" }];
 
   return (
     <>
@@ -26,19 +22,16 @@ function NavBar({ history, match }) {
             </div>
             <div>
               <ul>
-                <li onClick={changePageHandler}>{NavBarData.first}</li>
-                <li onClick={changePageHandler}>{NavBarData.second}</li>
-                <li onClick={changePageHandler}>{NavBarData.three}</li>
-                <li onClick={changePageHandler}>{NavBarData.four}</li>
-                <li>
-                  <i class="fas fa-search"></i>
-                </li>
-                <li>
-                  <i class="fas fa-heart"></i>
-                </li>
-                <li>
-                  <i class="fas fa-user"></i>
-                </li>
+                {NavBarDataLink.map((el) => (
+                  <li onClick={() => history.push(`${match.url}${el.urlLink}`)} key={el.id}>
+                    {el.innerText}
+                  </li>
+                ))}
+                {NavBarIconsData.map((el) => (
+                  <li>
+                    <i className={el.iconClass}></i>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

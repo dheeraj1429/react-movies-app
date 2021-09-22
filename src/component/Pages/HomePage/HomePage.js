@@ -7,6 +7,7 @@ function HomePage() {
   return (
     <>
       <div className="HomePageDiv">
+        <div className="bgDiv"></div>
         <div className="HomePageContent">
           <h1>SCOOTT PLGRIM US THE WORLD...</h1>
         </div>
