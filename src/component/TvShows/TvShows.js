@@ -1,28 +1,30 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-
+import MoviesCard from "../MoviesCard/MoviesCard";
+import { useContext } from "react";
 import "./TvShows.css";
 
+import { DataContext } from "../../App";
+
 function TvShows() {
+  const data = useContext(DataContext);
   const [Collection, setCollection] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=3`)
-      .then((res) => {
-        setCollection(res.data.results);
-      })
-      .catch((err) => console.log(err));
+    setCollection(data);
   }, []);
 
   const filterArr = Collection.filter((index, item) => item < 8);
-  console.log(filterArr);
 
   return (
     <div className="TvShowDiv">
+      <div className="TvShowHeader">
+        <div className="TvShowButton">
+          <p>TvShowButton</p>
+        </div>
+      </div>
       <div className="TvShowInner">
-        {filterArr.map((el) => (
-          <div className="card">{el.length}</div>
+        {filterArr.map(({ id, ...otherProps }) => (
+          <MoviesCard key={id} {...otherProps} />
         ))}
       </div>
     </div>
