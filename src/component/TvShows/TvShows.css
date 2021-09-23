@@ -20,28 +20,7 @@
   width: 100%;
   height: auto;
   padding: 20px 0;
-  border: 1px solid red;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-}
-.ContenueWatchingInnerCard {
-  width: 300px;
-  height: 100px;
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.ContenueWatchingImgDiv {
-  width: 80px;
-  height: 80px;
-  border: 1px solid red;
-  background-position: center;
-  background-size: cover;
-}
-.ContenueWatchingContentDiv {
-  color: var(--MainColor);
-}
-.ContenueWatchingContentDiv h3 {
-  font-size: 1.8rem;
+  background-color: #000;
 }

@@ -1,8 +1,9 @@
 import React from "react";
+import { Route, Switch } from "react-router";
 import HomePage from "../Pages/HomePage/HomePage";
 import NavBar from "../NavBar/NavBar";
 import SideBar from "../SideBar/SideBar";
-import { Route, Switch, Link } from "react-router";
+import MoviesShowPage from "../Pages/MoviesShowPage/MoviesShowPage";
 
 const AllPage = () => {
   return (
@@ -12,6 +13,7 @@ const AllPage = () => {
 
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/MoviesShowPage" component={MoviesShowPage} />
       </Switch>
     </>
   );
