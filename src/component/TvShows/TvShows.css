@@ -6,24 +6,42 @@
   background-position: center;
   background-size: cover;
 }
+.Container {
+  max-width: 1600px;
+  margin: auto;
+}
 .TvShowInner {
   max-width: 1600px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-.TvShowHeader {
-  width: 85%;
-  margin: auto;
+.ContenueWatchingDivCard {
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.ContenueWatchingInnerCard {
+  width: 300px;
+  height: 100px;
+  border: 1px solid red;
   display: flex;
-  border-bottom: 1px solid #efefef;
+  justify-content: center;
+  align-items: center;
 }
-.TvShowButton {
-  padding: 1rem 4rem;
-  background-color: red;
-  clip-path: polygon(7% 0, 100% 0%, 93% 100%, 0% 100%);
+.ContenueWatchingImgDiv {
+  width: 80px;
+  height: 80px;
+  border: 1px solid red;
+  background-position: center;
+  background-size: cover;
 }
-.TvShowButton p {
+.ContenueWatchingContentDiv {
   color: var(--MainColor);
-  font-size: 1.2rem;
+}
+.ContenueWatchingContentDiv h3 {
+  font-size: 1.8rem;
 }

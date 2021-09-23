@@ -1,0 +1,15 @@
+.TvShowHeader {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #efefef;
+  margin-top: 1.5rem;
+}
+.TvShowButton {
+  padding: 1rem 4rem;
+  background-color: red;
+  clip-path: polygon(7% 0, 100% 0%, 93% 100%, 0% 100%);
+}
+.TvShowButton p {
+  color: var(--MainColor);
+  font-size: 1.2rem;
+}
