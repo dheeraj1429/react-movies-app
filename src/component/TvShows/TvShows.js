@@ -6,19 +6,19 @@ import axios from "axios";
 
 import "./TvShows.css";
 
-function TvShows() {
+function TvShows(props) {
+  console.log(props.num);
   const [Collection, setCollection] = useState([]);
-  const [num, setnum] = useState(3);
 
   useEffect(() => {
     axios
-      .get(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=${num}`)
+      .get(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=${props.num}`)
       .then((res) => {
         setCollection(res.data.results);
         console.log(res);
       })
       .catch((err) => console.log(err));
-  }, [num]);
+  }, []);
 
   const filterArr = Collection.filter((index, item) => item < 8);
   const filterMoviesDiv = Collection.filter((index, item) => item < 5);
@@ -26,7 +26,7 @@ function TvShows() {
   return (
     <div className="TvShowDiv">
       <div className="Container">
-        <HeaderSection innerText="Continue Watching" />
+        <HeaderSection innerText={props.title} />
 
         <div className="ContenueWatchingDivCard">
           {filterMoviesDiv.map(({ id, ...otherProps }) => (
@@ -34,7 +34,7 @@ function TvShows() {
           ))}
         </div>
 
-        <HeaderSection innerText="Tv Show" />
+        <HeaderSection innerText={props.subTitle} />
         <div className="TvShowInner">
           {filterArr.map(({ id, ...otherProps }) => (
             <MoviesCard key={id} {...otherProps} />
