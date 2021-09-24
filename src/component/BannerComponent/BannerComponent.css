@@ -7,6 +7,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  display: none;
+}
+.ShowVedio {
+  display: block;
 }
 
 .BannerComponentDiv > div {
@@ -14,6 +26,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999;
+}
+
+.showBannerSection {
+  display: none;
 }
 
 .BannerIconDiv {

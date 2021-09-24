@@ -25,3 +25,8 @@
   cursor: pointer;
   font-size: 1.1rem;
 }
+.active {
+  position: fixed;
+  background-color: transparent;
+  z-index: 999;
+}

@@ -7,7 +7,6 @@ import axios from "axios";
 import "./TvShows.css";
 
 function TvShows(props) {
-  console.log(props.num);
   const [Collection, setCollection] = useState([]);
 
   useEffect(() => {

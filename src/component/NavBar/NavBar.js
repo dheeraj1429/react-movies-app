@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router";
 import "./NavBar.css";
 
 function NavBar({ history, match }) {
+  const [Navbar, setNavbar] = useState(false);
+
+  window.addEventListener("scroll", function (e) {
+    let scroll = this.scrollY;
+    if (scroll >= 10) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  });
+
   const NavBarDataLink = [
     { urlLink: "", id: 1, innerText: "Home" },
     { urlLink: "TvShow", id: 2, innerText: "Tv Show" },
@@ -14,7 +25,7 @@ function NavBar({ history, match }) {
 
   return (
     <>
-      <div className="Navbar">
+      <div className={Navbar ? "Navbar active" : "Navbar"}>
         <div className="Navbar-Containr">
           <div className="Innner-Navbar">
             <div>
