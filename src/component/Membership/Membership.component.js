@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { withRouter } from "react-router";
 import "./Membership.style.css";
 
-function Membership({ history, match }) {
+function Membership() {
   const [User, setUser] = useState({
     email: "",
   });
+  const [hideInput, sethideInput] = useState(false);
 
   const [Title, setTitle] = useState("Ready to watch? Enter your email to create or your membership.");
 
@@ -34,10 +35,10 @@ function Membership({ history, match }) {
         setUser({
           email: "",
         });
-        alert("done");
 
-        setTitle("Thanks for purchasing pro membership");
-        history.push(`${match.url}${"MoviesProMember"}`);
+        setTitle("Thanks for purchasing pro membership !!!");
+        sethideInput(true);
+        // history.push(`${match.url}${"MoviesProMember"}`);
       }
     } else {
       alert("please enter yout email");
@@ -49,7 +50,7 @@ function Membership({ history, match }) {
       <div className="MemberShipInnerDiv">
         <h3>{Title}</h3>
         <div className="inputDiv">
-          <form method="POST">
+          <form method="POST" className={hideInput ? "hideInput" : ""}>
             <input type="email" placeholder="Enter Adress" name="email" value={User.email} onChange={ChangeHandler}></input>
             <button type="submit" className="GetStart" onClick={getData}>
               GET START

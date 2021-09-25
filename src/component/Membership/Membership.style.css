@@ -27,6 +27,9 @@
   border-radius: 10px 0px 0px 10px;
   outline: none;
 }
+.hideInput {
+  display: none;
+}
 .GetStart {
   padding: 1.4rem 1.5rem;
   border: none;

@@ -14,14 +14,9 @@ function NavBar({ history, match }) {
     }
   });
 
-  const NavBarDataLink = [
-    { urlLink: "", id: 1, innerText: "Home" },
-    { urlLink: "TvShow", id: 2, innerText: "Tv Show" },
-    { urlLink: "Movies", id: 3, innerText: "Movies" },
-    { urlLink: "New&Popular", id: 4, innerText: "New & Popular" },
-  ];
+  const NavBarDataLink = [{ urlLink: "", id: 1, innerText: "Home" }];
 
-  const NavBarIconsData = [{ iconClass: "fas fa-search" }, { iconClass: "fas fa-heart" }, { iconClass: "fas fa-user" }];
+  const NavBarIconsData = [{ iconClass: "fas fa-search" }, { iconClass: "fas fa-user" }];
 
   return (
     <>

@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import YouTube from "react-youtube";
+import movieTrailer from "movie-trailer";
+
 import "./MoviesShowPage.css";
 
 function MoviesShowPage(props) {
-  console.log(props.location.AllDataCollection);
+  const [Trailer, setTrailer] = useState("");
+  const [vedioId, setvedioId] = useState("");
+  const title = props.location.AllDataCollection.title;
+
+  useEffect(() => {
+    movieTrailer(title).then((res) => {
+      setTrailer(res);
+      const UrlParam = new URLSearchParams(new URL(res).search);
+      setvedioId(UrlParam.get("v"));
+    });
+  }, []);
+
+  const opts = {
+    playerVars: {
+      autoplay: 1,
+    },
+  };
+
   return (
     <>
       <div className="vedioPlayDiv">
-        <iframe src="https://www.youtube.com/embed/-FmWuCgJmxo?autoplay=1" className="vedioPlayer"></iframe>
+        <YouTube videoId={vedioId} opts={opts} className="youtubeVedio" />
       </div>
     </>
   );

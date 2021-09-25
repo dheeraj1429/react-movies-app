@@ -26,10 +26,8 @@ function HomePage() {
 
       <TvShows num={num} title="Continue Watching" subTitle="Tv Show" />
       <BannerComponent />
-      <TvShows num={num + 1} title="New Movies" subTitle="Episode 1" />
-      <TvShows num={num + 2} title="Best of 2022" subTitle="Movies" />
-
-      <Membership />
+      <TvShows num={num + Math.floor(Math.random() * 6 + 1)} title="New Movies" subTitle="Episode 1" />
+      <TvShows num={num + Math.floor(Math.random() * 10 + 1)} title="Best of 2022" subTitle="Movies" />
     </>
   );
 }

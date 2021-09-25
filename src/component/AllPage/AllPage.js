@@ -6,6 +6,7 @@ import SideBar from "../SideBar/SideBar";
 import MoviesShowPage from "../Pages/MoviesShowPage/MoviesShowPage";
 import MoviesProMember from "../Pages/MoviesProMember/MoviesProMember";
 import Footer from "../Footer/Footer";
+import TvShows from "../TvShows/TvShows";
 
 const AllPage = () => {
   return (
