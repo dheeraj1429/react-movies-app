@@ -2,6 +2,7 @@ import React from "react";
 import CustomButton from "../../CustomButtom/CustomButton";
 import TvShows from "../../TvShows/TvShows";
 import BannerComponent from "../../BannerComponent/BannerComponent";
+import Membership from "../../Membership/Membership.component";
 
 import "./HomePage.css";
 
@@ -27,6 +28,8 @@ function HomePage() {
       <BannerComponent />
       <TvShows num={num + 1} title="New Movies" subTitle="Episode 1" />
       <TvShows num={num + 2} title="Best of 2022" subTitle="Movies" />
+
+      <Membership />
     </>
   );
 }

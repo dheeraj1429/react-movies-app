@@ -1,0 +1,39 @@
+.MemberShipBanner {
+  width: 100%;
+  padding: 40px 0;
+  height: auto;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MemberShipBanner h3 {
+  color: var(--lightSmook);
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+.MemberShipBanner .MemberShipInnerDiv {
+  text-align: center;
+}
+
+.MemberShipInnerDiv input {
+  width: 650px;
+  height: 60px;
+  margin: 1rem 0;
+  padding: 1rem;
+  outline: none;
+  border-radius: 10px 0px 0px 10px;
+  outline: none;
+}
+.GetStart {
+  padding: 1.4rem 1.5rem;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  background-color: var(--lightRed);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}

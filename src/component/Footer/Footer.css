@@ -1,0 +1,25 @@
+.FooterDiv {
+  width: 100%;
+  height: auto;
+  padding: 40px 0;
+  background-color: #000;
+}
+.Links {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.Links ul li {
+  list-style: none;
+}
+.Links ul .LinkTitle {
+  color: var(--MainColor);
+  margin: 1rem 0;
+}
+.Links ul li {
+  color: #efefef;
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
