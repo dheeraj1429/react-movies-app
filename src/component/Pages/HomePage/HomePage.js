@@ -24,10 +24,10 @@ function HomePage() {
         </div>
       </div>
 
-      <TvShows num={num} title="Continue Watching" subTitle="Tv Show" />
+      <TvShows num={num + Math.floor(Math.random() * 6) + 1} title="Continue Watching" subTitle="Tv Show" />
       <BannerComponent />
-      <TvShows num={num + Math.floor(Math.random() * 6 + 1)} title="New Movies" subTitle="Episode 1" />
-      <TvShows num={num + Math.floor(Math.random() * 10 + 1)} title="Best of 2022" subTitle="Movies" />
+      <TvShows num={num + Math.floor(Math.random() * 8) + 1} title="New Movies" subTitle="Episode 1" />
+      <TvShows num={num + Math.floor(Math.random() * 9) + 1} title="Best of 2022" subTitle="Movies" />
 
       <Membership />
     </>

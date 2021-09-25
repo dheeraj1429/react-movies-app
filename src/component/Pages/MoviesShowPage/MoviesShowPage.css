@@ -2,6 +2,7 @@
   width: 95%;
   height: 90vh;
   position: relative;
+  position: relative;
 }
 .youtubeVedio {
   min-width: 100%;
@@ -9,4 +10,20 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+.BackButtonDiv {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #fff;
+  z-index: 999;
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.BackButtonDiv i {
+  color: var(--MainColor);
 }

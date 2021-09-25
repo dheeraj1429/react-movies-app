@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
+import { Link } from "react-router-dom";
 
 import "./MoviesShowPage.css";
 
@@ -26,6 +27,11 @@ function MoviesShowPage(props) {
   return (
     <>
       <div className="vedioPlayDiv">
+        <Link to="/">
+          <div className="BackButtonDiv">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+        </Link>
         <YouTube videoId={vedioId} opts={opts} className="youtubeVedio" />
       </div>
     </>

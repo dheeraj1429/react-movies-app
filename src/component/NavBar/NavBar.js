@@ -33,6 +33,7 @@ function NavBar({ history, match }) {
                     {el.innerText}
                   </li>
                 ))}
+
                 {NavBarIconsData.map((el) => (
                   <li>
                     <i className={el.iconClass}></i>
