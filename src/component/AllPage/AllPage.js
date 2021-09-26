@@ -6,7 +6,7 @@ import SideBar from "../SideBar/SideBar";
 import MoviesShowPage from "../Pages/MoviesShowPage/MoviesShowPage";
 import MoviesProMember from "../Pages/MoviesProMember/MoviesProMember";
 import Footer from "../Footer/Footer";
-import TvShows from "../TvShows/TvShows";
+import SiginIn from "../SignInComponent/SignIn";
 
 const AllPage = () => {
   return (
@@ -18,6 +18,7 @@ const AllPage = () => {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/MoviesShowPage" component={MoviesShowPage} />
         <Route exact path="/MoviesProMember" component={MoviesProMember} />
+        <Route exact path="/Login" component={SiginIn} />
       </Switch>
 
       <Footer />

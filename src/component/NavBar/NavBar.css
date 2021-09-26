@@ -25,6 +25,9 @@
   cursor: pointer;
   font-size: 1.1rem;
 }
+.Innner-Navbar ul li i {
+  margin: 0 0.5rem;
+}
 .active {
   position: fixed;
   background-color: transparent;

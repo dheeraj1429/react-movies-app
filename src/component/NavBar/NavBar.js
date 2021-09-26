@@ -16,8 +16,6 @@ function NavBar({ history, match }) {
 
   const NavBarDataLink = [{ urlLink: "", id: 1, innerText: "Home" }];
 
-  const NavBarIconsData = [{ iconClass: "fas fa-search" }, { iconClass: "fas fa-user" }];
-
   return (
     <>
       <div className={Navbar ? "Navbar active" : "Navbar"}>
@@ -33,12 +31,17 @@ function NavBar({ history, match }) {
                     {el.innerText}
                   </li>
                 ))}
-
-                {NavBarIconsData.map((el) => (
-                  <li>
-                    <i className={el.iconClass}></i>
-                  </li>
-                ))}
+                <li>
+                  <i className="fas fa-search"></i>
+                </li>
+                <li>
+                  <i
+                    className="fas fa-user"
+                    onClick={() => {
+                      history.push(`${match.url}${"LogIn"}`);
+                    }}
+                  ></i>
+                </li>
               </ul>
             </div>
           </div>

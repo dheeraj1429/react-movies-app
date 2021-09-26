@@ -18,10 +18,6 @@ function HomePage() {
         </div>
 
         <div className="spacer"></div>
-
-        <div className="buttonDiv">
-          <CustomButton />
-        </div>
       </div>
 
       <TvShows num={num + Math.floor(Math.random() * 6) + 1} title="Continue Watching" subTitle="Tv Show" />
